@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e0e7ff, #f9fafb);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.login-container,
+.register-container,
+.admin-container {
+  background: #fff;
+  width: 400px;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    color: #1e3a8a;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    font-size: 1rem;
+    color: #475569;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  p {
+    color: #4b5563;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      color: #1e3a8a;
+      text-decoration: underline;
+    }
+  }
+
+  input,
+  select {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+  }
+
+  button {
+    padding: 10px 20px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+
+    &:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.admin-container {
+  width: 500px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+
+    th,
+    td {
+      border: 1px solid #e5e7eb;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    th {
+      background: #f1f5f9;
+      font-weight: 600;
+      color: #1e3a8a;
+    }
+
+    tr:nth-child(even) {
+      background: #f9fafb;
+    }
+
+    tr:hover {
+      background: #e0f2fe;
+      transition: 0.2s ease-in;
+    }
+  }
+}
+
+.voltar-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 600px) {
+  .login-container,
+  .register-container,
+  .admin-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+}
